@@ -30,7 +30,7 @@ ipv6helper
 集成无线驱动
 ```
 
-选择LuCI 配置 添加插件应用：常用
+```选择LuCI 配置 添加插件应用：常用
 -----------------------------------------------------------------------------------------
 LuCI ---> Applications ---> luci-app-accesscontrol  #访问时间控制
 LuCI ---> Applications ---> luci-app-adbyby-plus   #广告屏蔽大师Plus +
@@ -253,3 +253,5 @@ git pull                                                                        
 rm -rf ./tmp && rm -rf .config                                               # 清除编译配置和缓存
 make menuconfig                                                                # 进入编译配置菜单
 make -jn V=99                                                                    # 开始编译 n=线程数+1，例如4线程的I5填-j5
+```
+https://www.right.com.cn/forum/thread-3682029-1-1.html
