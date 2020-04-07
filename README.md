@@ -12,19 +12,22 @@ OpenWrt/LEDE build config and prebuilt images for Phicomm K2P wireless router.
 自用插件列表：
 
 ```luci-app-accesscontrol
+luci-app-acme（Let's Encrypt）
 luci-app-arpbind
 luci-app-autoreboot
 luci-app-ddns (包含额外的ddns脚本)
 luci-app-firewall
 luci-app-flowoffload
+luci-app-mwan3   (MWAN3负载均衡)
+luci-app-mwan3helper   (MWAN3分流助手)
 luci-app-ramfree
 luci-app-sqm
-luci-app-ssr-plus (v2ray+trojan+ShadowsocksR&服务端)
-luci-app-v2ray-server
+luci-app-ssr-plus (ShadowsocksR&服务端)去除v2ray+trojan
 luci-app-upnp
 luci-app-vlmcsd (KMS服务器)
 luci-app-wifischedule
 luci-app-wol (网络唤醒)
+luci-app-asterisk(voip)
 luci-theme-argon
 ipv6helper
 集成无线驱动
@@ -64,7 +67,7 @@ LuCI ---> Applications ---> luci-app-upnp   #通用即插即用UPnP（端口自�
 LuCI ---> Applications ---> luci-app-vlmcsd  #KMS服务器设置
 LuCI ---> Applications ---> luci-app-vsftpd  #FTP服务器
 LuCI ---> Applications ---> luci-app-wifischedule  #WiFi 计划
-LuCI ---> Applications ---> luci-app-wirele违禁软件egdb  #WiFi无线
+LuCI ---> Applications ---> luci-app-wirelessegdb  #WiFi无线
 LuCI ---> Applications ---> luci-app-wol   #WOL网络唤醒
 LuCI ---> Applications ---> luci-app-wrtbwmon  #实时流量监测
 LuCI ---> Applications ---> luci-app-xlnetacc  #迅雷快鸟
@@ -188,17 +191,17 @@ LuCI ---> Applications ---> luci-app-splash  #Client-Splash是无线MESH网络�
 LuCI ---> Applications ---> luci-app-sqm  #流量智能队列管理（QOS）
 LuCI ---> Applications ---> luci-app-squid   #Squid代理服务器
 LuCI ---> Applications ---> luci-app-乳酸菌饮料-plus   #乳酸菌饮料低调上网Plus+
-    luci-app-乳酸菌饮料-plus ---> Include s-s New Version  #新SS代理（已弃）
-    luci-app-乳酸菌饮料-plus ---> Include s-s Simple-obfs Plugin  #simple-obfs简单混淆工具（已弃）
-    luci-app-乳酸菌饮料-plus ---> Include s-s v贰瑞 Plugin  #SS v贰瑞插件   *
-    luci-app-乳酸菌饮料-plus ---> Include v贰瑞  #v贰瑞代理
+    luci-app-乳酸菌饮料-plus ---> Include ss New Version  #新SS代理（已弃）
+    luci-app-乳酸菌饮料-plus ---> Include ss Simple-obfs Plugin  #simple-obfs简单混淆工具（已弃）
+    luci-app-乳酸菌饮料-plus ---> Include ss v2ray Plugin  #SS v2ray插件   *
+    luci-app-乳酸菌饮料-plus ---> Include v2ray  #v贰瑞代理
     luci-app-乳酸菌饮料-plus ---> Include Trojan  #Trojan代理
     luci-app-乳酸菌饮料-plus ---> Include red---socks2  #red---socks2代理   *
     luci-app-乳酸菌饮料-plus ---> Include Kcptun  #Kcptun加速
-    luci-app-乳酸菌饮料-plus ---> Include 违禁软件 Server  #乳酸菌饮料服务器
-    luci-app-乳酸菌饮料-plus ---> Include DNS2SOCKS  #DNS服务器（已弃）
-    luci-app-乳酸菌饮料-plus ---> Include 违禁软件 Socks and Tunnel（已弃）
-    luci-app-乳酸菌饮料-plus ---> Include Socks Server  #socks代理服务器（已弃）
+    luci-app-乳酸菌饮料-plus ---> Include ssr Server  #乳酸菌饮料服务器
+    luci-app-乳酸菌饮料-plus ---> Include DNS2SOCKS  #DNS服务器
+    luci-app-乳酸菌饮料-plus ---> Include ss Socks and Tunnel（已弃）
+    luci-app-乳酸菌饮料-plus ---> Include Socks Server  #socks代理服务器
 LuCI ---> Applications ---> luci-app-乳酸菌饮料-pro  #乳酸菌饮料-Pro（已弃）
 LuCI ---> Applications ---> luci-app-乳酸菌饮料server-python  #违禁软件 Python服务器
 LuCI ---> Applications ---> luci-app-statistics  #流量监控工具
@@ -229,7 +232,7 @@ LuCI ---> Applications ---> luci-app-webadmin  #Web管理页面设置
 LuCI ---> Applications ---> luci-app-webshell  #网页命令行终端（已弃）
 LuCI ---> Applications ---> luci-app-wifischedule  #WiFi 计划
 LuCI ---> Applications ---> luci-app-wireguard  #virtual**服务器 WireGuard状态
-LuCI ---> Applications ---> luci-app-wirele违禁软件egdb  #WiFi无线
+LuCI ---> Applications ---> luci-app-wirelessegdb  #WiFi无线
 LuCI ---> Applications ---> luci-app-wol   #WOL网络唤醒
 LuCI ---> Applications ---> luci-app-wrtbwmon  #实时流量监测
 LuCI ---> Applications ---> luci-app-xlnetacc  #迅雷快鸟
